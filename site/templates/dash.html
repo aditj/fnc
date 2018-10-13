@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html>
+<head></head>
+
+<body>
+<a href="logout">logout</a>
+
+<a >Dashboard</a>
+<br>
+
+Hi {{ name }} !
+<br>
+Your Apis:
+
+
+ <table border = 1>
+        <tr>
+          <th>Api Key</th>
+          <th>URL</th>
+          <th>Clicks</th>
+        </tr>
+         {% for i in detail %}
+
+            <tr>
+
+               <td> {{ i[0] }} </td>
+               <td>  {{ i[2] }}</td>
+               <td> {{ i[1]}} </td>
+
+            </tr>
+
+         {% endfor %}
+
+      </table>
+      Create Your API
+      <form action="" method="post">
+        <input type="text" placeholder="URL" name="href" value="{{
+          request.form.href }}">
+
+        <input class="btn btn-default" type="submit" value="Create API">
+
+
+      </form>
+ </body>
+</html>

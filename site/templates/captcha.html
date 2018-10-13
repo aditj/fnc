@@ -1,0 +1,10 @@
+{% if error %}
+  <p class="error"><strong>Error:</strong> {{ error }}
+{% endif %}
+
+   <form  method="POST" action="">
+     <img src='{{ file_name1 }}' />
+     <input type="text" placeholder="Captcha" name="captcha" value="{{
+       request.form.captcha }}">
+<button type='submit'>Submit</button>
+   </form>
